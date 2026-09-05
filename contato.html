@@ -45,13 +45,14 @@
     <div class="contato-info">
       <div class="section-tag" style="color:var(--amber);">Contato</div>
       <h2>Vem pra Mais Uma</h2>
-      <div class="linha">📍 Rua Isaac Martins Barrocas, 42 - Centro, São Luís</div>
-      <div class="linha">💬 WhatsApp (98) 97005-0048</div>
-      <div class="linha">📷 Instagram @maisumacaipirinha_</div>
-      <a href="#" class="btn btn-amber" style="margin-top:20px;">Falar no WhatsApp</a>
+      <div class="linha">📍 <span data-config="endereco">Rua Isaac Martins Barrocas, 42 - Centro, São Luís</span></div>
+      <div class="linha">💬 WhatsApp <span data-config="whatsapp">(98) 97005-0048</span></div>
+      <div class="linha">📷 Instagram <span data-config="instagram">@maisumacaipirinha_</span></div>
+      <a href="#" class="btn btn-amber" style="margin-top:20px;" data-config-whatsapp-link target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
     <div class="mapa-embed">
       <iframe
+        id="mapaFrame"
         src="https://www.google.com/maps?q=Rua+Isaac+Martins+Barrocas,+42+-+Centro,+São+Luís+-+MA&output=embed"
         width="100%" height="260" style="border:0;"
         loading="lazy"
@@ -71,9 +72,13 @@
       <a href="regras.html">Regras</a>
       <a href="contato.html">Contato</a>
     </div>
+    <div class="f-credit">
+      Desenvolvido por <a href="https://instagram.com/cofobr/" target="_blank" rel="noopener">Cofo</a>
+    </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script type="module" src="assets/js/public-data.js"></script>
 </body>
 </html>

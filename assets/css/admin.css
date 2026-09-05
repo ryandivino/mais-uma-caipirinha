@@ -33,6 +33,12 @@
 .checkbox-field input{width:auto;}
 .form-error{color:#B3261E;font-size:13px;margin-top:-4px;margin-bottom:12px;min-height:1em;}
 .btn-block{width:100%;text-align:center;}
+.link-btn{
+  display:block;width:100%;margin-top:14px;background:none;border:none;
+  color:var(--magenta);font-size:13px;font-weight:600;text-decoration:underline;
+  cursor:pointer;text-align:center;
+}
+#forgotStatus{font-size:13px;margin-top:10px;text-align:center;color:#5a5450;}
 button.btn{cursor:pointer;font-family:inherit;}
 
 /* TABS */

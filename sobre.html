@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta property="og:title" content="Sobre - Mais Uma Caipirinha">
 <meta property="og:description" content="Conheça a história da Mais Uma Caipirinha, bar no Centro de São Luís.">
@@ -43,7 +43,7 @@
 <section class="page-hero">
   <div class="wrap">
     <div class="section-tag" style="color:var(--amber);">Sobre</div>
-    <h1>Um bar no coração da Ilha</h1>
+    <h1>Um bar no coração do Centro</h1>
   </div>
 </section>
 
@@ -55,10 +55,10 @@
       <div class="badge-inclusivo">A Mais Uma é um espaço LGBTQIAPN+ e de respeito. Aqui todo mundo é bem-vindo, desde que respeite os outros.</div>
     </div>
     <div class="horarios">
-      <div class="linha"><span>Quarta e quinta</span><b>17h45 às 00h</b></div>
-      <div class="linha"><span>Sexta e sábado</span><b>18h às 02h</b></div>
-      <div class="linha"><span>Domingo</span><b>15h às 1h</b></div>
-      <div class="linha" style="border-bottom:none;"><span>Endereço</span><b>Rua Isaac Martins Barrocas, 42 - Centro</b></div>
+      <div class="linha"><span>Quarta e quinta</span><b data-config="horario_qua_qui">17h45 às 00h</b></div>
+      <div class="linha"><span>Sexta e sábado</span><b data-config="horario_sex_sab">18h às 02h</b></div>
+      <div class="linha"><span>Domingo</span><b data-config="horario_dom">15h às 1h</b></div>
+      <div class="linha" style="border-bottom:none;"><span>Endereço</span><b data-config="endereco">Rua Isaac Martins Barrocas, 42 - Centro</b></div>
     </div>
   </div>
 </section>
@@ -72,9 +72,13 @@
       <a href="regras.html">Regras</a>
       <a href="contato.html">Contato</a>
     </div>
+    <div class="f-credit">
+      Desenvolvido por <a href="https://instagram.com/cofobr/" target="_blank" rel="noopener">Cofo</a>
+    </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script type="module" src="assets/js/public-data.js"></script>
 </body>
 </html>

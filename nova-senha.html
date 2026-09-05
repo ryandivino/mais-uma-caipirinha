@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+<title>Criar nova senha - Mais Uma Caipirinha</title>
+</head>
+<body class="admin-body">
+
+<div class="login-screen">
+  <div class="login-card">
+    <div class="nav-brand" style="margin-bottom:20px;">
+      <img src="assets/img/icon.svg" class="brand-icon" alt="Mais Uma Caipirinha">
+      <span class="wordmark">Mais Uma Caipirinha</span>
+    </div>
+
+    <div id="loadingState">
+      <h1>Confirmando link…</h1>
+      <p>Só um instante.</p>
+    </div>
+
+    <div id="formState" style="display:none;">
+      <h1>Crie sua senha</h1>
+      <p>Essa senha é só sua. Use pelo menos 6 caracteres.</p>
+      <form id="novaSenhaForm">
+        <div class="field">
+          <label for="novaSenha">Nova senha</label>
+          <input type="password" id="novaSenha" required minlength="6" autocomplete="new-password">
+        </div>
+        <div class="field">
+          <label for="confirmaSenha">Confirme a nova senha</label>
+          <input type="password" id="confirmaSenha" required minlength="6" autocomplete="new-password">
+        </div>
+        <div class="form-error" id="novaSenhaError"></div>
+        <button type="submit" class="btn btn-amber btn-block">Salvar senha</button>
+      </form>
+    </div>
+
+    <div id="invalidState" style="display:none;">
+      <h1>Link inválido ou expirado</h1>
+      <p>Volta pro painel e clica em "Esqueci minha senha" de novo pra receber um link novo.</p>
+      <a href="admin.html" class="btn btn-amber btn-block" style="margin-top:16px;">Voltar pro painel</a>
+    </div>
+
+    <div id="successState" style="display:none;">
+      <h1>Senha criada!</h1>
+      <p>Já pode entrar no painel com sua nova senha.</p>
+      <a href="admin.html" class="btn btn-amber btn-block" style="margin-top:16px;">Ir para o painel</a>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/js/nova-senha.js"></script>
+</body>
+</html>

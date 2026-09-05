@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="stylesheet" href="assets/css/admin.css">
-<title>Painel - Mais Uma Caipirinha</title>
+<title>Painel +1</title>
 </head>
 <body class="admin-body">
 
@@ -23,7 +23,7 @@
       <span class="wordmark">Mais Uma Caipirinha</span>
     </div>
     <h1>Painel</h1>
-    <p>Entre com sua conta para gerenciar cardápio, loja e agenda.</p>
+    <p>Entre com sua conta para gerenciar cardápio, loja, agenda, fotos e configurações do site.</p>
     <form id="loginForm">
       <div class="field">
         <label for="loginEmail">E-mail</label>
@@ -35,6 +35,8 @@
       </div>
       <div class="form-error" id="loginError"></div>
       <button type="submit" class="btn btn-amber btn-block">Entrar</button>
+      <button type="button" id="forgotPasswordBtn" class="link-btn">Esqueci minha senha / primeiro acesso</button>
+      <div id="forgotStatus"></div>
     </form>
   </div>
 </div>
@@ -54,11 +56,15 @@
       <button class="admin-tab active" data-section="cardapio">Cardápio</button>
       <button class="admin-tab" data-section="loja">Loja</button>
       <button class="admin-tab" data-section="agenda">Agenda</button>
+      <button class="admin-tab" data-section="fotos">Fotos do Hero</button>
+      <button class="admin-tab" data-section="config">Configurações</button>
     </div>
 
     <div class="admin-panel active" id="panel-cardapio"></div>
     <div class="admin-panel" id="panel-loja"></div>
     <div class="admin-panel" id="panel-agenda"></div>
+    <div class="admin-panel" id="panel-fotos"></div>
+    <div class="admin-panel" id="panel-config"></div>
   </main>
 </div>
 
