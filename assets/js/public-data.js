@@ -159,8 +159,83 @@ async function renderAgenda() {
     .join('');
 }
 
+// ---------------------------------------------------------------------------
+// FOTOS DO HERO (index.html)
+// ---------------------------------------------------------------------------
+async function renderHeroFotos() {
+  const container = document.querySelector('.hero-photo');
+  if (!container) return;
+
+  const { data, error } = await supabase
+    .from('hero_fotos')
+    .select('*')
+    .eq('ativo', true)
+    .order('ordem', { ascending: true });
+
+  if (!error && data && data.length > 0) {
+    container.innerHTML = data
+      .map((foto, i) => `<img src="${escapeHtml(foto.url)}" alt="Rolê na Mais Uma Caipirinha" class="${i === 0 ? 'active' : ''}">`)
+      .join('');
+  }
+  // se der erro ou o banco ainda estiver vazio, mantém as fotos que já
+  // estão fixas no HTML como fallback, em vez de deixar o espaço vazio.
+
+  const photos = container.querySelectorAll('img');
+  if (photos.length > 1) {
+    photos.forEach((p, i) => p.classList.toggle('active', i === 0));
+    let current = 0;
+    setInterval(() => {
+      photos[current].classList.remove('active');
+      current = (current + 1) % photos.length;
+      photos[current].classList.add('active');
+    }, 4000);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// CONFIGURAÇÕES GERAIS (horários, endereço, WhatsApp, Instagram)
+// Preenche qualquer elemento com data-config="chave" no HTML, o link de
+// WhatsApp (data-config-whatsapp-link), o mapa (id="mapaFrame") e a faixa
+// de horários animada do hero (.hero-strip-track).
+// ---------------------------------------------------------------------------
+async function renderSiteConfig() {
+  const { data, error } = await supabase.from('site_config').select('*').eq('id', 1).single();
+  if (error || !data) return;
+
+  document.querySelectorAll('[data-config]').forEach((el) => {
+    const key = el.getAttribute('data-config');
+    if (data[key] != null) el.textContent = data[key];
+  });
+
+  document.querySelectorAll('[data-config-whatsapp-link]').forEach((el) => {
+    const digits = (data.whatsapp || '').replace(/\D/g, '');
+    if (digits) el.setAttribute('href', `https://wa.me/55${digits}`);
+  });
+
+  const mapaFrame = document.getElementById('mapaFrame');
+  if (mapaFrame && data.endereco) {
+    mapaFrame.src = `https://www.google.com/maps?q=${encodeURIComponent(data.endereco)}&output=embed`;
+  }
+
+  const stripTrack = document.querySelector('.hero-strip-track');
+  if (stripTrack) {
+    const textos = [
+      `QUA E QUI ${(data.horario_qua_qui || '').toUpperCase()}`,
+      `SEX E SÁB ${(data.horario_sex_sab || '').toUpperCase()}`,
+      `DOM ${(data.horario_dom || '').toUpperCase()}`,
+    ];
+    const spans = [];
+    for (let i = 0; i < 4; i++) {
+      textos.forEach((t) => spans.push(`<span>${escapeHtml(t)}</span>`));
+    }
+    stripTrack.innerHTML = spans.join('');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderCardapio();
   renderLoja();
   renderAgenda();
+  renderHeroFotos();
+  renderSiteConfig();
 });
