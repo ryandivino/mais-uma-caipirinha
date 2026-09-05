@@ -206,7 +206,7 @@ function setupSection(key) {
 
   renderForm(key, {});
 
-  document.getElementById(`add-${key}`).addEventListener('click', () => handleSave(key, null));
+  document.getElementById(`add-${key}`).onclick = () => handleSave(key, null);
 
   loadList(key);
 }
