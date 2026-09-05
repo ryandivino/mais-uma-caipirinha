@@ -167,16 +167,36 @@ section{padding:88px 0; background:var(--creme); color:var(--tinta);}
 
 /* REGRAS */
 .regras{background:var(--creme-2);}
+.regras-subhead{font-weight:700;font-size:16px;margin:36px 0 14px;color:var(--magenta);}
+.regras-subhead:first-of-type{margin-top:0;}
 .regras-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .regra-item{
   background:var(--creme);border:2px solid var(--tinta);border-radius:14px;
   padding:18px 20px;font-size:15px;font-weight:600;display:flex;gap:12px;align-items:flex-start;
 }
+.regra-item.wide{grid-column:1/-1;}
 .regra-item .n{font-family:'Poppins';font-weight:700;color:var(--magenta);font-size:16px;}
+.doc-list{list-style:none;margin-top:10px;padding-left:0;font-weight:400;}
+.doc-list li{font-size:14px;padding:4px 0 4px 18px;position:relative;color:#3a3436;}
+.doc-list li::before{content:"→";position:absolute;left:0;color:var(--amber-dark);font-weight:700;}
 .regras-destaque{
   margin-top:24px;background:var(--verde);color:var(--creme);
   padding:22px 26px;border-radius:14px;font-weight:600;font-size:16px;
 }
+.priority-intro{font-size:15px;color:#3a3436;margin-bottom:18px;max-width:600px;}
+.priority-list{list-style:none;counter-reset:pri;}
+.priority-list li{
+  counter-increment:pri;
+  background:var(--creme);border:2px solid var(--tinta);border-radius:12px;
+  padding:14px 18px 14px 54px;margin-bottom:10px;position:relative;font-size:15px;
+}
+.priority-list li::before{
+  content:counter(pri);
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;border-radius:50%;background:var(--magenta);color:var(--creme);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:'Poppins';
+}
+.priority-list b{font-weight:700;}
 
 /* LOJA */
 .loja-intro{margin-bottom:36px;max-width:560px;}
@@ -225,6 +245,12 @@ footer{background:var(--tinta);color:var(--creme);padding:40px 0;}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 footer .f-brand{font-family:'Poppins';font-weight:700;font-size:16px;}
 footer .f-links{display:flex;gap:20px;font-size:14px;font-weight:600;}
+.f-credit{
+  width:100%;margin-top:24px;padding-top:20px;border-top:1px solid rgba(247,243,234,0.15);
+  font-size:12px;color:rgba(247,243,234,0.55);
+}
+.f-credit a{color:rgba(247,243,234,0.8);font-weight:600;text-decoration:underline;text-underline-offset:2px;}
+.f-credit a:hover{color:var(--creme);}
 
 @media (max-width:760px){
   .hero .wrap{grid-template-columns:1fr;text-align:left;}

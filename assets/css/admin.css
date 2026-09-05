@@ -3,7 +3,7 @@
 .admin-body{background:var(--creme-2);min-height:100vh;}
 
 .admin-header{
-  background:var(--magenta);color:var(--creme);
+  background:var(--tinta);color:var(--creme);
   padding:18px 24px;display:flex;align-items:center;justify-content:space-between;
 }
 .admin-header .wordmark{color:var(--creme);}
