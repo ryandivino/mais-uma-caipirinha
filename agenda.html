@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <meta name="description" content="Confira o line-up da semana na Mais Uma Caipirinha.">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="alternate icon" href="assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta property="og:title" content="Agenda - Mais Uma Caipirinha">
 <meta property="og:description" content="Confira o line-up da semana na Mais Uma Caipirinha.">
@@ -52,32 +50,8 @@
 
 <section>
   <div class="wrap">
-    <div class="agenda-list">
-      <div class="agenda-item">
-        <div class="agenda-day">03/09<span>Quinta</span></div>
-        <div><div class="agenda-title">Especial BK</div><div class="agenda-line">Gabi Leão e WUK</div></div>
-        <div class="agenda-tag">+1 Caipy</div>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-day">04/09<span>Sexta</span></div>
-        <div><div class="agenda-title">4 anos de Mais Uma Caipirinha</div><div class="agenda-line">Lp do Anjão, Butantan, Ruh e Barb</div></div>
-        <div class="agenda-tag">Edição especial</div>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-day">05/09<span>Sábado</span></div>
-        <div><div class="agenda-title">Sabadou na +1 Caipy</div><div class="agenda-line">Britnega, Barb e Zinnid</div></div>
-        <div class="agenda-tag">+1 Caipy</div>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-day">06/09<span>Domingo</span></div>
-        <div><div class="agenda-title">Especial Funk 2017-2019</div><div class="agenda-line">Dmocker, Diordan e Pedrinho</div></div>
-        <div class="agenda-tag">+1 Caipy</div>
-      </div>
-      <div class="agenda-item">
-        <div class="agenda-day">09/09<span>Quarta</span></div>
-        <div><div class="agenda-title">Duê Sessions 1.0</div><div class="agenda-line">Duê Banda / Bloco 100 Sigilo</div></div>
-        <div class="agenda-tag">+1 Caipy</div>
-      </div>
+    <div class="agenda-list" id="agenda-container">
+      <p style="padding:20px 0;">Carregando agenda…</p>
     </div>
     <p class="agenda-note">Cobramos porta e temos limite de pessoas, chegue cedo para garantir sua entrada. Agenda sempre com as datas confirmadas, sem depender de atualização manual.</p>
   </div>
@@ -96,5 +70,6 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script type="module" src="assets/js/public-data.js"></script>
 </body>
 </html>

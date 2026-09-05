@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <meta name="description" content="Cardápio de caipirinhas, drinks autorais e frozen da Mais Uma Caipirinha.">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="alternate icon" href="assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta property="og:title" content="Cardápio - Mais Uma Caipirinha">
 <meta property="og:description" content="Cardápio de caipirinhas, drinks autorais e frozen da Mais Uma Caipirinha.">
@@ -52,46 +50,8 @@
 
 <section class="cardapio">
   <div class="wrap">
-    <div class="cardapio-grid">
-      <div class="cardapio-cat">
-        <h3>Caipirinhas</h3>
-        <ul>
-          <li><span>Limão</span><span>R$ 14</span></li>
-          <li><span>Abacaxi</span><span>R$ 18</span></li>
-          <li><span>Maracujá</span><span>R$ 18</span></li>
-          <li><span>Maracujá com limão</span><span>R$ 18</span></li>
-          <li><span>Cupuaçu</span><span>R$ 18</span></li>
-          <li><span>Bacuri</span><span>R$ 20</span></li>
-        </ul>
-      </div>
-      <div class="cardapio-cat">
-        <h3>Autorais</h3>
-        <ul>
-          <li><span>Doce Pecado</span><span>R$ 21</span></li>
-          <li><span>Maranhense</span><span>R$ 20</span></li>
-          <li><span>Cana Fresca</span><span>R$ 20</span></li>
-          <li><span>Ilha do Amor</span><span>R$ 25</span></li>
-          <li><span>Banda Limão com Mel</span><span>R$ 21</span></li>
-          <li><span>Banzeiro</span><span>R$ 26</span></li>
-        </ul>
-      </div>
-      <div class="cardapio-cat">
-        <h3>Drinks da casa</h3>
-        <ul>
-          <li><span>Sorvete do Reviver</span><span>R$ 26</span></li>
-          <li><span>Morango da Paixão</span><span>R$ 28</span></li>
-          <li><span>Morangão</span><span>R$ 25</span></li>
-          <li><span>Skol Beats + gin</span><span>R$ 30</span></li>
-        </ul>
-      </div>
-      <div class="cardapio-cat">
-        <h3>Frozen</h3>
-        <ul>
-          <li><span>Sabores (várias frutas)</span><span>R$ 19</span></li>
-          <li><span>Combinações</span><span>R$ 24</span></li>
-          <li><span>Especial (morango + Skol Beats)</span><span>R$ 29</span></li>
-        </ul>
-      </div>
+    <div class="cardapio-grid" id="cardapio-container">
+      <p style="padding:24px;">Carregando cardápio…</p>
     </div>
   </div>
 </section>
@@ -109,5 +69,6 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script type="module" src="assets/js/public-data.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+/* Painel administrativo — usa as mesmas variáveis de assets/css/styles.css */
+
+.admin-body{background:var(--creme-2);min-height:100vh;}
+
+.admin-header{
+  background:var(--magenta);color:var(--creme);
+  padding:18px 24px;display:flex;align-items:center;justify-content:space-between;
+}
+.admin-header .wordmark{color:var(--creme);}
+.admin-logout{
+  background:none;border:1px solid var(--creme);color:var(--creme);
+  padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;
+}
+
+/* LOGIN */
+.login-screen{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.login-card{
+  background:var(--creme);border-radius:16px;padding:36px 32px;max-width:360px;width:100%;
+  box-shadow:0 8px 30px rgba(0,0,0,0.12);
+}
+.login-card h1{font-size:22px;margin-bottom:6px;}
+.login-card p{font-size:14px;color:#5a5450;margin-bottom:24px;}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;}
+.field input, .field textarea, .field select{
+  width:100%;padding:10px 12px;border:1px solid #ddd5c4;border-radius:8px;
+  font-family:'Inter';font-size:14px;background:var(--creme);color:var(--tinta);
+}
+.field input:focus, .field textarea:focus, .field select:focus{outline:2px solid var(--magenta);}
+.checkbox-field{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+.checkbox-field input{width:auto;}
+.form-error{color:#B3261E;font-size:13px;margin-top:-4px;margin-bottom:12px;min-height:1em;}
+.btn-block{width:100%;text-align:center;}
+button.btn{cursor:pointer;font-family:inherit;}
+
+/* TABS */
+.admin-main{max-width:1080px;margin:0 auto;padding:32px 24px 80px;}
+.admin-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
+.admin-tab{
+  padding:10px 20px;border-radius:20px;font-weight:700;font-size:14px;
+  background:var(--creme);border:1px solid #ddd5c4;cursor:pointer;
+}
+.admin-tab.active{background:var(--magenta);color:var(--creme);border-color:var(--magenta);}
+.admin-panel{display:none;}
+.admin-panel.active{display:block;}
+
+/* FORM DE ADIÇÃO */
+.admin-card{background:var(--creme);border-radius:14px;padding:24px;margin-bottom:24px;}
+.admin-card h2{font-size:17px;margin-bottom:16px;}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;align-items:end;}
+.form-grid .field{margin-bottom:0;}
+.form-actions{margin-top:16px;display:flex;gap:10px;}
+
+/* LISTA / TABELA */
+.admin-list{background:var(--creme);border-radius:14px;overflow:hidden;}
+.admin-row{
+  display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;
+  padding:14px 20px;border-bottom:1px solid #ede6d5;
+}
+.admin-row:last-child{border-bottom:none;}
+.admin-row.inactive{opacity:.5;}
+.admin-row .ar-main{font-size:14px;}
+.admin-row .ar-title{font-weight:700;}
+.admin-row .ar-sub{color:#5a5450;font-size:13px;}
+.admin-row .ar-actions{display:flex;gap:8px;}
+.icon-btn{
+  border:none;background:var(--creme-2);width:34px;height:34px;border-radius:8px;
+  cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;
+}
+.icon-btn.danger{background:#F6D9D6;}
+.empty-state{padding:28px 20px;text-align:center;color:#5a5450;font-size:14px;}
+.status-msg{font-size:13px;margin-bottom:16px;padding:10px 14px;border-radius:8px;}
+.status-msg.error{background:#F6D9D6;color:#7A1B14;}
+.status-msg.success{background:#DCEFDC;color:#1F4A20;}
+
+@media (max-width:600px){
+  .admin-row{grid-template-columns:1fr;}
+  .admin-row .ar-actions{justify-content:flex-start;}
+}
